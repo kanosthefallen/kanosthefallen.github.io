@@ -1,0 +1,88 @@
+/* Apply a default font size to the entire document */
+html, body {
+  font-size: 16px;
+}
+
+/* Adjust the font size for small screens */
+@media (max-width: 480px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+
+/* Center the content on the page */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #3c3f4a, #1c1e28);
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Add some spacing between elements */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+/* Style the dropdown selection boxes */
+select {
+  padding: 5px;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZS8+PGcgZGF0YS1uYW1lPSIxNC1Eb2N1bWVudC1BcnJvdyBEb3duIiBpZD0iXzE0LURvY3VtZW50LUFycm93X0Rvd24iPjxwYXRoIGQ9Ik0yOC43MSw2LjI5bC02LTZBMSwxLDAsMCwwLDIyLDBINkEzLDMsMCwwLDAsMywzVjI5YTMsMywwLDAsMCwzLDNIMjZhMywzLDAsMCwwLDMtM1Y3QTEsMSwwLDAsMCwyOC43MSw2LjI5Wk0yNywyOWExLDEsMCwwLDEtMSwxSDZhMSwxLDAsMCwxLTEtMVYzQTEsMSwwLDAsMSw2LDJIMjFWNmEyLDIsMCwwLDAsMiwyaDRaIi8+PHBhdGggZD0iTTE3LDIyLjU5VjExSDE1VjIyLjU5bC0yLjI5LTIuMjktMS40MSwxLjQxLDQsNGExLDEsMCwwLDAsMS40MSwwbDQtNC0xLjQxLTEuNDFaIi8+PC9nPjwvc3ZnPg==");
+   background-repeat: no-repeat;
+  background-position: right 0.1rem center;
+  background-size: 1.25rem auto;
+}
+
+
+/* Style the buttons */
+button {
+  background-color: #49A248;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #347d38;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #880e4f;
+}
+
+#characteristic {
+  width: 80%;
+  text-align: center;
+}
+
+#type {
+  width: 80%;
+  text-align: center;
+}
+
+#x-files-select {
+  width: 100%;
+  text-align: center;
+}

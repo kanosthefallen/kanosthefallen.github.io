@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileX</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>FileX</h1>
+    </header>
+    <main>
+      <label for="characteristic">Characteristic:</label>
+      <select id="characteristic" name="characteristic" onchange="setTypeOptions()">
+      </select>
+      <label for="type">Type:</label>
+      <select id="type" name="type">
+      </select>
+	  <span id="file-count"># Files</span>
+      <button id="eliminate">Eliminate</button>
+      <button id="confirm">Confirm</button>
+	  <label for="x-files-select">All possible X-Files:</label>
+<select id="x-files-select" name="x-files-select"></select>
+      <button id="guess">Guess</button>
+      <button id="new-game">New Game</button>
+    </main>
+  </body>
+</html>
