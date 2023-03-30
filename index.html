@@ -15,15 +15,19 @@
       <select id="characteristic" name="characteristic" onchange="setTypeOptions()">
       </select>
       <label for="type">Type:</label>
-      <select id="type" name="type">
+      <select id="type" name="type" onchange="updateItemCount()">
       </select>
 	  <span id="file-count"># Files</span>
-      <button id="eliminate">Eliminate</button>
-      <button id="confirm">Confirm</button>
+      <button id="eliminate" onclick="eliminateItem()">Eliminate</button>
+      <button id="confirm" onclick="filterData()">Confirm</button>
 	  <label for="x-files-select">All possible X-Files:</label>
-<select id="x-files-select" name="x-files-select"></select>
-      <button id="guess">Guess</button>
-      <button id="new-game">New Game</button>
+	  <select id="x-files-select" name="x-files-select"></select>
+      <button id="guess" onclick="displayCharacteristics()">Guess</button>
+      <button id="new-game" onclick="resetDataSet()">New Game</button>
+	  <div id="winPop" style="display:block;">
+	  <p>TEST
+	  </p>
+	  </div>
     </main>
   </body>
 </html>
