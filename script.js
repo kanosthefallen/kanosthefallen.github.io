@@ -51,7 +51,7 @@ function loadData(){
 //Popup for Guessing
 function displayCharacteristics() {
   // Get the selected X-File from the dropdown menu
-  selectedGuess = document.getElementById("x-files-select").value;alert(selectedGuess);
+  selectedGuess = document.getElementById("x-files-select").value;
   xlist.forEach(option => {
     if(option.Name == selectedGuess){
 		xfile = option;
