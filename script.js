@@ -3,15 +3,19 @@ var characteristicDropdown;
 var xfileDropdown;
 var xlist;
 var newGameBtn;
+var guessBtn;
 var eliminateBtn;
 var confirmButton;
 var selectBoxes;
+var xfile;
+var selectedGuess;
 
 
   
 //Window On load
 window.onload = function() { 
   newGameBtn = document.getElementById("new-game");
+  guessBtn = document.getElementById("guess");
   eliminateBtn = document.getElementById("eliminate");
   confirmButton = document.getElementById('confirm');
   selectBoxes = document.querySelectorAll('select');
@@ -25,19 +29,6 @@ window.onload = function() {
   dataUpdate(); 
   
   //Listeners
-  typeDropdown.addEventListener('change', updateItemCount);
-  
-  //New Game Button
-  newGameBtn.addEventListener("click", resetDataSet);
-
-  //Eliminate Button
-  eliminateBtn.addEventListener("click", function() {
-  eliminateItem();
-  // other code to update the UI with the filtered data goes here
-  });
-
-  //Confirm Button
-  confirmButton.addEventListener('click', filterData);
 }
   
 //Window On Unload
@@ -45,6 +36,7 @@ window.onload = function() {
   sessionStorage.setItem('xlist', JSON.stringify(xlist));
 }
 
+//Load Existing Data
 function loadData(){
 	try{
 		if (JSON.parse(sessionStorage.getItem('xlist'))!== null){
@@ -53,6 +45,32 @@ function loadData(){
 	} catch (e) {
 		console.error("Error parsing JSON data: " + e);
   	xlist = createDataSet();
+  }
+}
+
+//Popup for Guessing
+function displayCharacteristics() {
+  // Get the selected X-File from the dropdown menu
+  selectedGuess = document.getElementById("x-files-select").value;alert(selectedGuess);
+  xlist.forEach(option => {
+    if(option.Name == selectedGuess){
+		xfile = option;
+	}
+  });
+  
+  // Create a message that lists the type of each characteristic
+  var message = "Name: " + xfile.Name + "\n";
+  message += "Affiliation: " + xfile.Affiliation + "\n";
+   message += "Motive: " + xfile.Motive + "\n";
+    message += "Method: " + xfile.Method + "\n";
+	 message += "Result: " + xfile.Result + "\n";
+  
+  // Ask the user if they're sure they want to make a guess
+  var confirmed = window.confirm(message + "\nAre you sure you want to make a guess?");
+  
+  // If the user clicks "OK", make a guess
+  if (confirmed) {
+    //makeGuess();
   }
 }
 
