@@ -106,7 +106,7 @@ function createDataSet() {
 	Result: "Abduction"
 	},
 	{
-	Name: "Ded Kalm",
+	Name: "Dod Kalm",
 	Affiliation: "Alien",
 	Motive: "Control",
 	Method: "Manipulation",
@@ -269,7 +269,7 @@ function createDataSet() {
 	{
 	Name: "The Swarm",
 	Affiliation: "Primordial",
-	Motive: "Control",
+	Motive: "Survival",
 	Method: "Violence",
 	Result: "Abduction"
 	},
